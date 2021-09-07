@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block title%} 
+Recipes
+{% endblock title %}
+
+{% block body %}
+   <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-around">
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;">
+            Cuisine
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Indian</a></li>
+            <li><a class="dropdown-item" href="#">Japanese</a></li>
+            <li><a class="dropdown-item" href="#">Chinese</a></li>
+            <li><a class="dropdown-item" href="#">Italian</a></li>
+            <li><a class="dropdown-item" href="#"><strong>View All</strong></a></li>
+          </ul>
+        </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;">
+            Healthy
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Low Calorie</a></li>
+            <li><a class="dropdown-item" href="#">Easy & Healthy</a></li>
+            <li><a class="dropdown-item" href="#">Diabetes-Friendly</a></li>
+            <li><a class="dropdown-item" href="#">High Fibre</a></li>
+            <li><a class="dropdown-item" href="#">Low Cholesterol</a></li>
+            <li><a class="dropdown-item" href="#">Low Fat</a></li>
+            <li><a class="dropdown-item" href="#">Vegan</a></li>
+            <li><a class="dropdown-item" href="#">Artery-healthy</a></li>
+            <li><a class="dropdown-item" href="#"><strong>View All</strong></a></li>
+          </ul>
+        </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;">
+            Quick & Easy
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Quick Dinners</a></li>
+            <li><a class="dropdown-item" href="#">Easy & Healthy</a></li>
+            <li><a class="dropdown-item" href="#">Quick Vegetarian</a></li>
+            <li><a class="dropdown-item" href="#">Quick Indian</a></li>
+            <li><a class="dropdown-item" href="#">Easy Chicken</a></li>
+            <li><a class="dropdown-item" href="#">Easy Pastas</a></li>
+            <li><a class="dropdown-item" href="#"><strong>View All</strong></a></li>
+          </ul>
+        </li>
+          <a class="nav-link" href="#" style="color:black;">Meal Plan</a>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;">
+            Holidays & Seasons
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Summer Cookbook Club</a></li>
+            <li><a class="dropdown-item" href="#">Game Day Snacks</a></li>
+            <li><a class="dropdown-item" href="#">Best Grilling Recipes</a></li>
+            <li><a class="dropdown-item" href="#">Summer Favorites</a></li>
+            <li><a class="dropdown-item" href="#"><strong>View All</strong></a></li>
+          </ul>
+        </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;">
+            Drinks
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Non-Alcholic</a></li>
+            <li><a class="dropdown-item" href="#">Alcholic</a></li>
+             <li><a class="dropdown-item" href="#"><strong>View All</strong></a></li>
+          </ul>
+        </li>
+    </nav>
+  </div>
+</div>
+{% load static %}
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+    </div>
+  </div>
+
+   <div class="container py-2">
+    <h2 style="color:black;text-align:center;">Featured Recipes</h2>
+  </div>
+
+ <div class="row mb-2 py-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Indian</strong>
+          <h3 class="mb-0">Indian Chicken Curry</h3>
+          <p class="card-text mb-auto">This is a really good recipe for spicy Indian chicken curry. It's pretty easy to make and tastes really good!</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block center">
+          <img src="{% static 'img/chicken curry.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2" style="color:magenta;">Drinks</strong>
+          <h3 class="mb-0">Cherry Pop Cocktail</h3>
+          <p class="card-text mb-auto">A Cherry Pop Cocktail is a summer-y take on a gin fizz made with puréed cherries, orgeat, gin, and a splash of dry sparkling wine.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+           <img src="{% static 'img/cocktail.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <div class="row mb-2 py-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Japanese</strong>
+          <h3 class="mb-0">Spongy Japanese Cheesecake</h3>
+          <p class="mb-auto">This spongy, light cheesecake is good plain, with fresh fruit topping, or you can even frost it.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+           <img src="{% static 'img/cheesecake.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2" style="color:red;">Healthy</strong>
+          <h3 class="mb-0">Chicken Fajitas</h3>
+          <p class="mb-auto">A flavorful marinade and a quick sear make for easy homemade chicken fajitas—onions and bell peppers help, too. This is a classic you can make yourself!</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+           <img src="{% static 'img/fajita.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body %}
