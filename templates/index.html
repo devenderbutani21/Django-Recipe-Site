@@ -1,89 +1,74 @@
 {% extends 'base.html' %}
 
-{% block title%} 
+{% block title%}
 Home
 {% endblock title %}
 
 {% block body %}
-<div class="container-fluid px-0">
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="row position-relative overflow-hidden p-3 p-md-5 m-md-2 text-center bg-light">
+  {% load static %}
+  <div class="col p-lg-4 mx-2" align="left">
+    <h1 class="display-4 fw-normal"><b>Let's Start Cooking Some Popular Recipes</b></h1>
+    <p class="lead fw-normal">Want to learn cooking but are confused, where to start?</p>
+    <p class="lead fw-normal">No need to worry!</p>
+    <a class="btn btn-success" href="#">Get Started</a>
+    <a class="btn btn-outline-success" href="#">Explore Menu</a>
   </div>
+  <div class="col p-lg-4 mx-2">
+    <img src="{% static 'img/food-home.png' %}" height="294px" width="fitcontent" class="d-block w-100" alt="...">
+  </div>
+</div>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-2 text-center bg-light">
+  <h1 class="display-5 fw-normal"><b>Popular Food</b></h1>
+  <p class="lead fw-normal">we provide a variety of food and beverage recipes with high taste from famous chefs</p>
+  <div class="row">
+    <div class="col-4">
+      <img src="{% static 'img/hot-dog.png' %}" height="fitcontent" width="50px" class="d-block w-100" alt="...">
+    </div>
+    <div class="col-4">
+      <img src="{% static 'img/pasta.png' %}" height="fitcontent" width="50px" class="d-block w-100" alt="...">
+    </div>
+    <div class="col-4">
+      <img src="{% static 'img/pork-chops.png' %}" height="fitcontent" width="50px" class="d-block w-100" alt="...">
+    </div>
+    <div class="col-4">
+      <img src="{% static 'img/dish.png' %}" height="fitcontent" width="50px" class="d-block w-100" alt="...">
+    </div>
+    <div class="col-4">
+      <img src="{% static 'img/food.png' %}" height="fitcontent" width="50px" class="d-block w-100" alt="...">
+    </div>
+    <div class="col-4">
+      <img src="{% static 'img/sushi.png' %}" height="fitcontent" width="50px" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
 
 <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-2 text-center bg-light">
-{% load static %}
-    <div class="col p-lg-4 mx-2" align="left">
-      <h1 class="display-4 fw-normal" ><b>Let's Start Cooking Some Popular Recipes</b></h1>
-      <p class="lead fw-normal">Want to learn cooking but are confused, where to start?</p>
-      <p class="lead fw-normal">No need to worry!</p>
-      <a class="btn btn-success" href="#">Get Started</a>
-      <a class="btn btn-outline-success" href="#">Explore Menu</a>
-    </div>
-    <div class="col p-lg-4 mx-2">
-      <img src="{% static 'img/food-home.png' %}" height="294px" width="fitcontent" class="d-block w-100" alt="...">
-    </div>
+  <div class="col p-lg-4 mx-2">
+    <img src="{% static 'img/men-chef.png' %}" height="345px" width="fitcontent" class="d-block w-100" alt="...">
   </div>
+  <div class="col p-lg-4 mx-2" align="left">
+    <a class="btn btn-outline-success rounded-pill">View Menu</a>
+    <h1 class="display-5 fw-normal"><b>Variety of food and beverage recipes</b></h1>
+    <p class="lead fw-normal">We have prepared a variety of food and beverage recipes from famous chefs, with cooking steps and with good taste.</p>
+    <a class="btn btn-success" href="#">View Menu</a>
+  </div>
+</div>
 
-  <div class="container py-4 px-0">
-    <h2 style="color:black;">Most Recent</h2>
+<div class="row position-relative overflow-hidden p-3 p-md-5 m-md-2 text-center bg-light">
+  <div class="col p-lg-4 mx-2">
+    <img src="{% static 'img/app.png' %}" height="411.5px" width="fitcontent" class="d-block w-100" alt="...">
   </div>
+  <div class="col p-lg-4 mx-2" align="left">
+    <a class="btn btn-outline-success rounded-pill">Download App</a>
+    <h1 class="display-5 fw-normal"><b>Get the app</b></h1>
+    <p class="lead fw-normal">Our app is avaialble on the App Store and PLaystore, you can download for free for a more comfortable experience.</p>
+    <a class="btn btn-dark" href="#"><img src="{% static 'img/apple-store.png' %}" height="57px" width="fitcontent"></a> 
+    <a class="btn btn-dark" href="#"><img src="{% static 'img/google-store.png' %}" height="57px" width="fitcontent"></a>
+  </div>
+</div>
 
- <div class="row mb-2 py-2 container-fluid">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0">25 Summer Slow Cooker Recipes That'll Keep Your Kitchen Cool</h3>
-          <p class="card-text mb-auto">Your handy countertop appliance can do so much more than winter soups and stews.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block center">
-          <img src="{% static 'img/pesto.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0">Tasty and Cheap Chicken Recipes for Every Day This Month</h3>
-          <p class="card-text mb-auto">These inexpensive but flavor-packed dinners are going to be a hit with the entire family.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-           <img src="{% static 'img/macncheese.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
-        </div>
-      </div> 
-    </div>
-  </div>
-
-  <div class="row mb-2 py-2 container-fluid">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0">26 Fresh No-Cook Meals (and Desserts!) to Make on Repeat This Summer</h3>
-          <p class="mb-auto">Skipping the oven is easy with these tasty recipes.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-           <img src="{% static 'img/wraps.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0">Common Ingredient Substitutions</h3>
-          <p class="mb-auto">Out of baking powder (or baking soda)? Make your own with our ingredient substitutions guide.</p>
-          <a href="#" class="stretched-link">Continue reading</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-           <img src="{% static 'img/subs.jpg' %}" height="200px" width="fitcontent" class="d-block w-100" alt="...">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="border-top">
-  </div>
+<div class="border-top">
+</div>
 {% endblock body %}
